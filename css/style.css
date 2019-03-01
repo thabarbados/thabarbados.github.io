@@ -33,10 +33,6 @@ html, body {
 
 .second {
   background-color: #073642;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
 
 .third {
@@ -52,8 +48,8 @@ html, body {
 
 .pagination > li {
   list-style: none;
-  height: 20px;
-  width: 90px;
+  height: 1vh;
+  width: 2vw;
   background: #757c83;
   border-radius: 10%;
   margin-top: 10px;
@@ -73,17 +69,47 @@ html, body {
   color: azure;
   font-size: 5vh;
 }
+
+
+.secondFlex {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.head {
+  width: 100%;
+  height: 10%;
+  background-color: #033d5e;
+}
+
 .secondPageLeft {
   width: 35vw;
-  min-width: 200px;
-  height: 100%;
+  min-width: 150px;
+  height: 90%;
   background-color: #0b212f;
 }
 
 .secondPageRight {
   width: 65vw;
-  height: 100%;
+  height: 90%;
   background-color: #a2b4c3;
+  display: flex;
+  flex-direction: raw;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+
+}
+
+@media screen and (max-device-width: 800px) {
+  .secondPageRight {display: none;}
+}
+
+@media screen and (max-device-width: 800px) {
+  .secondPageLeft {width: 100%;}
 }
 
 .ball {
@@ -94,20 +120,44 @@ html, body {
 
 .skills {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .work {
-  margin: 30px;
-  padding: 30px;
-  align-items: stretch;
-  justify-content: center;
+  height: 10%;
+  margin: 2%;
   border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
   color: aliceblue;
-  flex: 1 1 10vh;
-  text-align: center;
-  font-size: 4vh;
 }
 
+@media screen and (max-device-width: 800px) {
+  .work {font-size: 2em;}
+}
+
+.skillsImage {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border: 5px solid #0b212f;
+  margin: 5%;
+
+}
+
+.image {
+  width: 25%;
+  height: 25%;
+  margin: 1%;
+}
