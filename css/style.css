@@ -1,3 +1,5 @@
+/* Website style*/
+
 * {
   padding: 0;
   margin: 0;
@@ -36,7 +38,7 @@ html, body {
 }
 
 .third {
-  background: linear-gradient(#0b212f 60%, #00111e);
+  background: linear-gradient(#033d5e 60%, #00111e);
 }
 
 .pagination {
@@ -60,6 +62,8 @@ html, body {
   background: #ffffff;
 }
 
+/* first page style */
+
 .title {
   width: 100%;
   position: absolute;
@@ -69,6 +73,13 @@ html, body {
   font-size: 5vh;
 }
 
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+/* Second page style */
 
 .secondFlex {
   height: 100%;
@@ -85,40 +96,67 @@ html, body {
   font-size: 3em;
   text-align: center;
   color: #a2b4c3;
+}
 
+.head {
+  width: 95%;
+  position: relative;
+  text-align: center;
+  color: #a2b4c3;;
+  font-size: 4vh;
+}
+
+@media screen and (max-device-width: 600px) {
+  .head {font-size: 3vh;}
+}
+
+#wrapper, #modal {
+  display: none;
+}
+
+#button {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  height: 3vh;
+  width: auto;
+  background-color: #a2b4c3;
+  font-size: 50%;
+  padding: 5px;
+  box-shadow: 0 0 30px #a2b4c3;
+}
+
+#wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal {
+  width: auto;
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+  z-index: 99;
+  background-color: #a2b4c3;;
+  font-size: 1em;
+  padding: 1%;
+  color: #00111e
 }
 
 .secondPageLeft {
   width: 35vw;
   min-width: 150px;
   height: 90%;
-  background-color: #0b212f;
-}
-
-.secondPageRight {
-  width: 65vw;
-  height: 90%;
-  background: #a2b4c3;
-  display: flex;
-  flex-direction: raw;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-
-}
-
-@media screen and (max-device-width: 800px) {
-  .secondPageRight {display: none;}
+  background-color: #033d5e;
 }
 
 @media screen and (max-device-width: 800px) {
   .secondPageLeft {width: 100%;}
-}
-
-.ball {
-  position: absolute;
-  border-radius: 100%;
-  opacity: 0.7;
 }
 
 .skills {
@@ -138,17 +176,63 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3.5em;
-  color: #a2b4c3;
-  background: linear-gradient(to right, #0b212f 70%, #a2b4c3);
+  background: linear-gradient(to right, #033d5e 70%, #a2b4c3);
 }
 
 .work:hover {
   background: #a2b4c3;
 }
 
+.show {
+  font-size: 3em;
+  color: #a2b4c3;
+}
+
+.text {
+  display: none;
+  color: #0b212f;
+  font-size: 1.5em;
+  overflow: hidden;
+}
+
 @media screen and (max-device-width: 800px) {
-  .work {font-size: 2em;}
+  .show {font-size: 1.5em;}
+}
+
+@media screen and (max-device-width: 800px) {
+  .text {font-size: 1em;}
+}
+
+.work:hover .text {
+  display: block;
+}
+
+.work:hover .show {
+  display: none;
+}
+
+
+.study {
+  opacity: 0.5;
+}
+
+.study:hover {
+  opacity: 1;
+}
+
+.secondPageRight {
+  width: 65vw;
+  height: 90%;
+  background: #a2b4c3;
+  display: flex;
+  flex-direction: raw;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (max-device-width: 800px) {
+  .secondPageRight {display: none;}
 }
 
 .skillsImage {
@@ -159,50 +243,36 @@ html, body {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  border: 5px solid #0b212f;
-  box-shadow: 0 0 30px #0b212f;
+  border: 5px solid #033d5e;
+  box-shadow: 0 0 30px #033d5e;
   margin: 5%;
 }
 
-.image {
-  display: block;
-  width: 25%;
-  height: 25%;
-  margin: 3%;
-}
-
-.popup {
-  display: block;
-  width: 50%;
-}
-
-.study {
-  opacity: 0.5;
-  
-}
-
-.study:hover {
-  opacity: 1;
-}
-
-.head {
-  width: 95%;
+.slideshow-container {
+  max-width: 1000px;
   position: relative;
-  text-align: center;
-  color: #a2b4c3;;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.slidesDescription {
+  color: #033d5e;
   font-size: 4vh;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
 }
-@media screen and (max-device-width: 600px) {
-  .head {font-size: 3vh;}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
 }
-.text {
-  display: none;
-  color: #0b212f;
-  font-size: 0.7em;
-}
-.work:hover .show {
-  display: none;
-}
-.work:hover .text {
-  display: block;
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }

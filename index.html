@@ -16,12 +16,18 @@
 
 <body>
     <div class="pages">
-        <section class="first page" id="top">
-            <h2 class="title">WELCOME</h2>
+        <section class="first page">
+            <h2 class="title">W</h2>
         </section>
         <section class="second page">
             <div class="secondFlex";>
-                <div class="head">Страница интерактивна. Приветствуется перемещение мыши и клики.</div>
+                <div class="head">
+                    <button id="button">Подсказка</button>
+                    <div id="wrapper"></div>
+                    <div id="modal">Наведите мышь на пункты слева
+                         и получите больше информации.</div>
+                    <span>Мои навыки:</span>
+                </div>
                 <div class="secondPageLeft">
                     <div class="skills">
                         <div class="work">
@@ -69,35 +75,58 @@
                             <span class="text">Начал изучение недавно и имею базовое представление.
                             </span>
                         </div></div>
-                    </div>
+                </div>
                 <div class="secondPageRight">
-                    <div class="skillsImage" id="popup">
-                        <img src="/img/html.png" alt="HTML5" class="image">
-                        <img src="/img/css.png" alt="CSS3" class="image">
-                        <img src="/img/js.png" alt="JavaScript" class="image">
-                        <img src="/img/linux.png" alt="Linux" class="image">
-                        <img src="/img/vsc.png" alt="VS Code" class="image">
-                        <img src="/img/wp.png" alt="Webpack" class="image">
-                        <img src="/img/sass.png" alt="Sass" class="image">
-                        <img src="/img/bem.png" alt="BEM" class="image">
-                        <img src="/img/react.png" alt="React" class="image">
+                    <div class="skillsImage">
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                    <img src="/img/html.png" class="skillsSlides">
+                                    <span class="slidesDescription">HTML 5</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/css.png" class="skillsSlides">
+                                    <span class="slidesDescription">CSS 3</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/js.png" class="skillsSlides">
+                                    <span class="slidesDescription">JavaScript</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/linux.png" class="skillsSlides">
+                                    <span class="slidesDescription">Linux</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/vsc.png" class="skillsSlides">
+                                    <span class="slidesDescription">VS Code</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/wp.png" class="skillsSlides">
+                                    <span class="slidesDescription">Webpack</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/sass.png" class="skillsSlides">
+                                    <span class="slidesDescription">SASS</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/bem.png" class="skillsSlides">
+                                    <span class="slidesDescription">BEM</span>
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="/img/react.png" class="skillsSlides">
+                                    <span class="slidesDescription">React</span>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="third page">
+            <a href="/files/Terekhov_CV.pdf" download="Terekhov_CV">Download</a>
         </section>
         
     </div>
-    
-    <ul class="pagination">
-    </ul>
+    <ul class="pagination"></ul>
     <script src="/js/index.js" charset="utf-8"></script>
-   
-
-
-
-
 </body>
 
 </html>

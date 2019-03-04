@@ -2,7 +2,7 @@
 
 window.onload = () => {
   const Slider = function(pages, pagination) {
-    let slides = [],
+    let slideSkills = [],
         btns = [],
         count = 0,
         current = 0,
@@ -10,10 +10,10 @@ window.onload = () => {
         animation_state = false;
 
     const init = () => {
-      slides = pages.children;
-      count = slides.length;
+      slideSkills = pages.children;
+      count = slideSkills.length;
       for(let i = 0; i < count; i++) {
-        slides[i].style.bottom = -(i * 100) + '%';
+        slideSkills[i].style.bottom = -(i * 100) + '%';
         let btn = document.createElement('li');
         btn.dataset.slide = i;
         btn.addEventListener('click', btnClick)
@@ -31,7 +31,7 @@ window.onload = () => {
         current = index;
         btns[current].classList.add('active');
         for(let i = 0; i < count; i++) {
-          slides[i].style.bottom = (current - i) * 100 + '%';
+          slideSkills[i].style.bottom = (current - i) * 100 + '%';
         }
       }
     }
@@ -49,12 +49,42 @@ window.onload = () => {
   let pages = document.querySelector('.pages');
   let pagination = document.querySelector('.pagination');
   let slider = new Slider(pages, pagination)
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let j;
+    let slideSkills = document.getElementsByClassName("mySlides");
+    for (j = 0; j < slideSkills.length; j++) {
+      slideSkills[j].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slideSkills.length) {slideIndex = 1} 
+    slideSkills[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+
+let button = document.getElementById('button');
+let modal = document.getElementById('modal');
+let wrapper = document.getElementById('wrapper');
+
+button.onclick = function () {
+	modal.style.display = 'block';
+  wrapper.style.display = 'block';
+}
+
+wrapper.onclick = function () {
+	modal.style.display = 'none';
+  wrapper.style.display = 'none';
+}
 }
 
 //First page animation
 
 const colors = ["#d9d9db", "#d1c559", "#fffad6", "#fcd283", "#fffef4"];
-const numBalls = 500;
+const numBalls = 250;
 const balls = [];
 
 for (let i = 0; i < numBalls; i++) {
@@ -92,3 +122,7 @@ balls.forEach((el, i, ra) => {
     }
   );
 });
+
+
+document.querySelector(".dload").click();
+
