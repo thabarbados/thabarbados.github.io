@@ -67,9 +67,9 @@ html, body {
 .title {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 30%;
   text-align: center;
-  color: azure;
+  color: #a2b4c3;
   font-size: 5vh;
 }
 
@@ -275,4 +275,48 @@ html, body {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+/* third page*/
+
+.contactsHead {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  color: #a2b4c3;
+  font-size: 5vh;
+}
+
+.thirdTable {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center; 
+  justify-content: center; 
+  overflow: auto;
+}
+
+.thirdContacts {
+  margin-right:40px;
+}
+
+.contactsImg {
+  float: left;
+  margin-right: 20px;
+}
+
+.contacts {
+  text-decoration: none;
+  font-size: 4em;
+  color: #a2b4c3;
+  padding-right: 20px;
+  border-right: 2px solid #a2b4c3;
+}
+
+@media screen and (max-device-width: 600px) {
+  .contacts {font-size: 2em;}
 }
